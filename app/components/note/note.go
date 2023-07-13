@@ -39,7 +39,7 @@ func (p Notes) HeadingMOS(page, pages int) string {
 		out += tex.Hyperlink(p.ref(page-1), tex.ResizeBoxW(`\myLenHeaderResizeBox`, `$\langle$`)) + " "
 	}
 
-	out += tex.Hypertarget(p.ref(page), "") + tex.ResizeBoxW(`\myLenHeaderResizeBox`, `Index Notes`)
+	out += tex.Hypertarget(p.ref(page), "") + tex.ResizeBoxW(`\myLenHeaderResizeBox`, `Index`)
 
 	if page < pages {
 		out += " " + tex.Hyperlink(p.ref(page+1), tex.ResizeBoxW(`\myLenHeaderResizeBox`, `$\rangle$`))
